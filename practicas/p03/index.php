@@ -65,5 +65,68 @@
     <p>Lo que paso en el segundo bloque de asignaciones, fue sustituir el contenido que tenia $a y $b del primer bloque de asignación, al mostrar 
         los resultados en el navegador ambas variables tienen el mismo contenido debido a que $b hace referencia al contenido de $a.
     </p>
+    <h2>Inciso 3</h2>
+    <p>Muestra el contenido de cada variable inmediatamente después de cada asignación,
+        verificar la evolución del tipo de estas variables (imprime todos los componentes de los
+        arreglo):
+    </p>
+    <p>$a = “PHP5”;</p>
+    <p>$z[] = &$a;</p>
+    <p>$b = "5a version de PHP";</p>
+    <p>$c = $b*10;</p>
+    <p>$a .= $b;</p>
+    <p> $b *= $c;</p>
+    <p>$z[0] = “MySQL”;</p>
+
+    <ul>
+        <li>
+            <?php
+                $a = "PHP5";
+                echo 'Contenido de $a es: ' .$a;
+            ?>
+        </li>
+        <li>
+            <?php
+                $z[] = &$a;
+                echo '$z[] contiene: ';
+                var_dump($z);
+            ?>
+        </li>
+        <li>
+            <?php
+                $b = "5a version de PHP";
+                echo '$b contiene: '.$b;
+            ?>
+        </li>
+        <li>
+            <?php
+                echo '$c = $b*10, para esta asignacion es imposible realizarla,
+                debido a que la variable $b es un string por lo que no se
+                puede multiplicar por un int (en este caso por 10)';
+            ?>
+        </li>
+        <li>
+            <?php
+                $a .= $b;
+                echo "$a<br> Debido a esta asignacion con punto ocurre que el
+                valor que se le asigno aparezca dos veces" ;
+            ?>
+        </li>
+        <li>
+            <?php
+                echo '$b *= $c, para esta asignación es imposble realizarla por
+                el error que se genera anteriormente con la asignación
+                $c = $b*10';
+                
+            ?>
+        </li>
+        <li>
+            <?php
+                $z[0] = "MySQL";
+                echo '$z[0] contiene: ';
+                var_dump($z);
+            ?>
+        </li>
+    </ul>
 </body>
 </html>
