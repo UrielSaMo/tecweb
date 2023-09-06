@@ -32,33 +32,33 @@
     <p>$b = 'MySQL';</p>
     <p>$c = &$a;</p>
     <?php
-        $a = "ManejadorSQL";
-        $b = 'MySQL';
-        $c = &$a;
+        $a2 = "ManejadorSQL";
+        $b2 = 'MySQL';
+        $c2 = &$a2;
     ?>
     <p>Ahora muestra el contenido de cada variable</p>
     <?php
     echo '<ul>';
-    echo 'El contenido de $a es: '.$a;
+    echo 'El contenido de $a es: '.$a2;
     echo '<br>';
-    echo 'El contenido de $b es: '.$b;
+    echo 'El contenido de $b es: '.$b2;
     echo '<br>';
-    echo 'El contenido de $c es: '.$c;
+    echo 'El contenido de $c es: '.$c2;
     echo '</ul>';
     ?>
     <p>Agrega al código actual las siguientes asignaciones:</p>
     <p>$a = "PHP server";</p>
     <p>$b = &$a;</p>
     <?php
-        $a = "PHP server";
-        $b = &$a;
+        $a2 = "PHP server";
+        $b2 = &$a2;
     ?>
     <p>Vuelve a mostrar el contenido de cada uno</p>
     <?php
          echo '<ul>';
-         echo 'El contenido de $a es: '.$a;
+         echo 'El contenido de $a es: '.$a2;
          echo '<br>';
-         echo 'El contenido de $b es: '.$b;
+         echo 'El contenido de $b es: '.$b2;
          echo '</ul>';
     ?>
     <p>Describe en y muestra en la página obtenida qué ocurrió en el segundo bloque de asignaciones</p>
@@ -81,52 +81,50 @@
     <ul>
         <li>
             <?php
-                $a = "PHP5";
-                echo 'Contenido de $a es: ' .$a;
+                $a3 = "PHP5";
+                echo 'Contenido de $a3 es: ' .$a3;
             ?>
         </li>
         <li>
             <?php
-                $z[] = &$a;
-                echo '$z[] contiene: ';
-                var_dump($z);
+                $z3[] = &$a3;
+                echo '$z3[] contiene: ';
+                var_dump($z3);
             ?>
         </li>
         <li>
             <?php
-                $b = "5a version de PHP";
-                echo '$b contiene: '.$b;
+                $b3 = "5a version de PHP";
+                echo '$b3 contiene: '.$b3;
             ?>
         </li>
         <li>
             <?php
-                echo '$c = $b*10, para esta asignacion es imposible realizarla,
-                debido a que la variable $b es un string por lo que no se
-                puede multiplicar por un int (en este caso por 10)';
+                echo '$c3 contiene: ';
+                echo @$c3 = $b3*10;
             ?>
         </li>
         <li>
             <?php
-                $a .= $b;
-                echo "$a<br> Debido a esta asignacion con punto ocurre que el
-                valor que se le asigno aparezca dos veces" ;
+                $a3 .= $b3;
+                echo '$a3 contiene: ';
+                echo $a3;
             ?>
         </li>
         <li>
             <?php
-                echo '$b *= $c, para esta asignación es imposble realizarla por
-                el error que se genera anteriormente con la asignación
-                $c = $b*10';
-                
+                 echo '$b3 contiene: ';
+                echo @$b3 *= $c3;
+
             ?>
         </li>
         <li>
             <?php
-                $z[0] = "MySQL";
+                $z3[0] = "MySQL";
                 echo '$z[0] contiene: ';
-                var_dump($z);
+                var_dump($z3);
             ?>
         </li>
     </ul>
 </body>
-</html>
+</html
