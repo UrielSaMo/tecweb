@@ -126,5 +126,25 @@
             ?>
         </li>
     </ul>
+    <h2>Inciso 4</h2>
+    <p>Lee y muestra los valores de las variables del ejercicio anterior, pero ahora con la ayuda de
+        la matriz $GLOBALS o del modificador global de PHP.</p>
+    <?php
+        $a4 = "PHP5";
+        $z4[] = &$a4;
+        $b4 = "5a version de PHP";
+        @$c4 = $b4*10;
+        $a4 .= $b4;
+        @$b4 *= $c4;
+        $z4[0] = "MySQL";
+
+        function varglobal(){
+            global $a4, $z4, $b4, $c4, $m;
+            $m = $a4.'<br>'.$b4.'<br>'.var_dump($z4).'<br>'.$c4.'<br>'.$z4[0];
+
+        }
+        varglobal();
+        echo $m;
+    ?>
 </body>
-</html
+</html>
