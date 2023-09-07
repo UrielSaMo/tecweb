@@ -146,5 +146,20 @@
         varglobal();
         echo $m;
     ?>
+    <h2>Inciso 5</h2>
+    <p>Dar el valor de las variables $a, $b, $c al final del siguiente script:</p>
+    <p>$a = “7 personas”;</p>
+    <p>$b = (integer) $a;</p>
+    <p>$a = “9E3”;</p>
+    <p>$c = (double) $a;</p>
+    <?php
+        $a5 = "7 personas";
+        $b5 = (integer) $a5;
+        $a5 = "9E3";
+        $c5 = (double) $a5;
+        echo '$a5: '.$a5.'<br>';
+        echo '$b5: '.$b5.'<br>';
+        echo '$c5: '.$c5.'<br>';
+    ?>
 </body>
 </html>
