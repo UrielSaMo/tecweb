@@ -192,5 +192,23 @@
         echo 'El valor booleano de $c6 es: ' . (@$c_bool6 ? 'TRUE' : 'FALSE') . "<br>";
         echo 'El valor booleano de $e6 es: ' . (@$e_bool6? 'TRUE' : 'FALSE') . "<br>";
     ?>
+    <h2>Inciso 7</h2>
+    <p>Usando la variable predefinida $_SERVER, determina lo siguiente:</p>
+    <p>La versión de Apache y PHP</p>
+    <p>El nombre del sistema operativo (servidor)</p>
+    <p>El idioma del navegador (cliente).</p>
+    <?php
+        $apacheVersion = $_SERVER['SERVER_SOFTWARE'];
+        $phpVersion = phpversion();
+        
+        echo 'Versión de Apache: ' . $apacheVersion . '<br>';
+        echo 'Versión de PHP: ' . $phpVersion . '<br>';
+        
+        $serverOS = php_uname();
+        echo 'El nombre del sistema operativo (servidor): ' . $serverOS . '<br>';
+
+        $idioma = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
+        echo $idioma;
+    ?>
 </body>
 </html>
