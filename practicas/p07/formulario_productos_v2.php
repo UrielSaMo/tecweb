@@ -9,11 +9,11 @@
 <body>
     <h1 aling="center">Datos del nuevo producto</h1>
     <p>Evita dejar espacios.</p>
-    <form   method="post" onsubmit=" return validarFormulario" action="set_producto.php">
+    <form   method="post" onsubmit=" return validarFormulario()" action="set_producto.php">
         <fieldset>
             <legend>Datos a insertar del  nuevo producto</legend>
             <ul>
-                <li><label for="form-nombre">Nombre: <input type="text" id="nombre" name="nombre" required></label></li>
+                <li><label for="form-nombre">Nombre: <input type="text" id="nombre" name="nombre" value="<?=$_POST['nombre']?>" required></label></li>
                 <li><label for="form-marca">Marca:</label>
                 <select type="text" id="marca" name="marca" required>
                   <option value="">Seleccione una opción</option>
@@ -26,15 +26,15 @@
                   <option value="POCO">POCO</option>
                 </select>
               </li>
-                <li><label for="form-modelo">Modelo: <input type="text" name="modelo" id="modelo" required></label></li>
-                <li><label for="form-precio">Precio: <input type="number" step="0.01" name="precio" id="precio" required></label></li>
-                <li><label for="detalles">Detalles: <input type="text" name="detalles" id="detalles" ></label></li>
-                <li><label for="form-unidades">Unidades: <input type="number" name="unidades" id="unidades" required></label></li>
-                <li><label for="form-imagen">Imagen: <input type="text" name="imagen" id="imagen"></label></li>
+                <li><label for="form-modelo">Modelo: <input type="text" name="modelo" id="modelo" value="<?=$_POST['model']?>" required></label></li>
+                <li><label for="form-precio">Precio: <input type="number" step="0.01" name="precio" id="precio" value="<?= $_POST['precio']?>" required></label></li>
+                <li><label for="detalles">Detalles: <input type="text" name="detalles" id="detalles" value="<?= $_POST['detalles'] ?>"></label></li>
+                <li><label for="form-unidades">Unidades: <input type="number" name="unidades" id="unidades" value="<?= $_POST['unidades']?>" required></label></li>
+                <li><label for="form-imagen">Imagen: <input type="text" name="imagen" id="imagen" value="<?= $_POST['imagen']?>"></label></li>
             </ul>
         </fieldset>
         <p>
-            <input type="submit" value="Insertar">
+            <input type="submit" value="Modificar">
             <input type="reset">
         </p>
     </form>
@@ -80,7 +80,7 @@
             return false;
           }
       
-          imagen.defaultValue = "img/img.jpg";
+          imagen.defaultValue = "img/cat.jpg";
       
           return true;
         }
