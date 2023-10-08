@@ -158,7 +158,7 @@
                 form.appendChild(imageIn);
 
                 form.method = 'POST';
-                form.action = 'formulario_productos_v2.php';  
+                form.action = 'formulario_productos_v3.php';  
 
                 document.body.appendChild(form);
                 form.submit();

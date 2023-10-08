@@ -7,12 +7,13 @@
     <title>Formulario pra insertar nuevos productos a la base de datos</title>
 </head>
 <body>
-    <h1 aling="center">Datos del nuevo producto</h1>
-    <p>Evita dejar espacios.</p>
+    <h1 aling="center">Datos producto</h1>
     <form   method="post" onsubmit=" return validarFormulario()" action="set_producto_v2.php">
+    
         <fieldset>
-            <legend>Datos a insertar del  nuevo producto</legend>
+            <legend>Datos a modificar del producto</legend>
             <ul>
+                <li><input type="text" id= "id" name="id" value="<?= $_POST['id']?>" readonly></li>
                 <li><label for="form-nombre">Nombre: <input type="text" id="nombre" name="nombre" value="<?=$_POST['nombre']?>" required></label></li>
                 <li><label for="form-marca">Marca:</label>
                 <select type="text" id="marca" name="marca" required>
