@@ -7,7 +7,7 @@
     if( isset($_POST['id']) ) {
         $id = $_POST['id'];
         // SE REALIZA LA QUERY DE BÚSQUEDA Y AL MISMO TIEMPO SE VALIDA SI HUBO RESULTADOS
-        if ( $result = $conexion->query("SELECT * FROM productos WHERE id = '{$id}'") ) {
+        if ( $result = $conexion->query("SELECT * FROM productos WHERE id = '{$id}' or nombre like '%{$id}%' or marca like '%{$id}%' or detalles like '%{$id}%'") ) {
             // SE OBTIENEN LOS RESULTADOS
 			$row = $result->fetch_array(MYSQLI_ASSOC);
 
@@ -26,4 +26,4 @@
     
     // SE HACE LA CONVERSIÓN DE ARRAY A JSON
     echo json_encode($data, JSON_PRETTY_PRINT);
-?>
+?> 
