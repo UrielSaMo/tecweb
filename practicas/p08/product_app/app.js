@@ -72,6 +72,25 @@ var baseJSON = {
     var finalJSON = JSON.parse(productoJsonString);
     // SE AGREGA AL JSON EL NOMBRE DEL PRODUCTO
     finalJSON["nombre"] = document.getElementById("name").value;
+    if (finalJSON.precio < 99.99){
+      window.alert("el precio debe ser mayor a 99.99 pesos")
+    }
+    parseInt(finalJSON["unidades"]);
+    if (finalJSON.unidades<=0){
+      window.alert("Debe ingresrar al menos una unidad");
+    }
+    if(finalJSON.modelo==""){
+      window.alert("introduce un modelo");
+    }
+    if(finalJSON.marca==""){
+      window.alert("introduce una marca");
+    }
+    if(finalJSON.detalles.length>250){
+      window.alert("ingresa los detalles con menos de 250 caracteres");
+    }
+    if (finalJSON.imagen== ""){
+      finalJSON['imagen']='img/imagen.png';
+    }
     // SE OBTIENE EL STRING DEL JSON FINAL
     productoJsonString = JSON.stringify(finalJSON, null, 2);
   
@@ -83,10 +102,13 @@ var baseJSON = {
       // SE VERIFICA SI LA RESPUESTA ESTÁ LISTA Y FUE SATISFACTORIA
       if (client.readyState == 4 && client.status == 200) {
         console.log(client.responseText);
+        let respuesta = JSON.parse(client.responseText);
+        alert(respuesta.mensaje);
       }
     };
     client.send(productoJsonString);
   }
+ 
   
   // SE CREA EL OBJETO DE CONEXIÓN COMPATIBLE CON EL NAVEGADOR
   function getXMLHttpRequest() {
