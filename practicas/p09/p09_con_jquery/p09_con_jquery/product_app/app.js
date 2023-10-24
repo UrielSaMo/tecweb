@@ -100,5 +100,38 @@ $(document).ready(function () {
         });
         e.preventDefault();
     });
+    //--------------------Funcion para buscar producto------------------------
+    function fetchProducts() {
+        $.ajax({
+            url: 'backend/product-list.php',
+            type: 'GET',
+            success: function (response) {
+                let productos = JSON.parse(response);
+                let template = '';
+
+                productos.forEach(producto => {
+                    template += `
+                        <tr productId="${producto.id}">
+                            <td>${producto.id}</td>
+                            <td>
+                                <a href="#" class="product-item">${producto.nombre}</a>
+                            </td>
+                            <td>${producto.marca}</td>
+                            <td>${producto.modelo}</td>
+                            <td>$${producto.precio}</td>
+                            <td>${producto.detalles}</td>
+                            <td>${producto.unidades}</td>
+                            <td>
+                                <button class="product-delete btn btn-danger">
+                                    Eliminar
+                                </button>    
+                            </td>
+                        </tr>
+                    `
+                });
+                $('#products').html(template);
+            }
+        });
+    }
 
 });
