@@ -133,5 +133,19 @@ $(document).ready(function () {
             }
         });
     }
+//------------------------------Funcion para el Boton de eliminar
+    $(document).on('click', '.product-delete', function () {
+        if (confirm('¿Quieres eliminar el producto?')) {
+            const element = $(this)[0].parentElement.parentElement;
+            const id = $(element).attr('productId');
+            $.post('backend/product-delete.php', { id }, function (response) {
+                let respuesta = JSON.parse(response);
+                console.log(respuesta);
+                fetchProducts();
+                let mensaje = respuesta.message;
+                alert(mensaje);
+            });
+        }
+    });
 
 });
