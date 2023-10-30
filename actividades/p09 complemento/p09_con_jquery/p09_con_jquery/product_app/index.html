@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
 </head>
 
-<body onload="init()">
+<body >
 
   <!-- BARRA DE NAVEGACIÓN  -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -34,28 +34,34 @@
         <div class="card">
           <div class="card-body">
             <!-- FORMULARIO PARA AGREGAR PRODUCTO -->
-           <!-- FORMULARIO PARA AGREGAR PRODUCTO -->
-            <form id="product-form" onsubmit=" return validarFormulario()">
+            <form id="product-form">
               <div class="form-group">
-                <input class="form-control" type="text" id="name" placeholder="Nombre de producto" required>
+                <input class="form-control" type="text" id="name" placeholder="Nombre de producto" >
+                <span class="error" id="nameError"></span>
               </div>
               <div class="form-group">
-                <input class="form-control" type="number" step="0.01" id="price" placeholder="Precio" required>
+                <input class ="form-control" type="text" step="0.01" id="price" placeholder="Precio" >
+                <span class="error" id="priceError"></span>
               </div>
               <div class="form-group">
-                <input class="form-control" type="number" id="units" placeholder="Unidades" required>
+                <input class="form-control" type="number" id="units" placeholder="Unidades" >
+                <span class="error" id="unitsError"></span>
               </div>
               <div class="form-group">
-                <input class="form-control" type="text" id="model" placeholder="Modelo" required>
+                <input class="form-control" type="text" id="model" placeholder="Modelo" >
+                <span class="error" id="modelError"></span>
               </div>
               <div class="form-group">
-                <input class="form-control" type="text" id="brand" placeholder="Marca" required>
+                <input class="form-control" type="text" id="brand" placeholder="Marca" >
+                <span class="error" id="brandError"></span>
               </div>
               <div class="form-group">
                 <textarea class="form-control" id="details" cols="30" rows="5" placeholder="Detalles"></textarea>
+                <span class="error" id="detailsError"></span>
               </div>
               <div class="form-group">
                 <input class="form-control" type="text" id="image" placeholder="URL de la imagen">
+                <span class="error" id="imageError"></span>
               </div>
               <input type="hidden" id="product_Id">
               <button class="btn btn-primary btn-block text-center" type="submit">
@@ -89,55 +95,72 @@
     </div>
   </div>
 
-  
-  <script>
+  <!-- <script>
     function validarFormulario() {
-      var nombre = document.getElementById("name").value;
-      var marca = document.getElementById("brand").value;
-      var modelo = document.getElementById("model").value;
-      var precio = document.getElementById("price").value;
-      var detalles = document.getElementById("details").value;
-      var unidades = document.getElementById("units").value;
-      var imagen = document.getElementById("image");
-      var errores = "";
+  var nombre = document.getElementById("name").value;
+  var marca = document.getElementById("brand").value;
+  var modelo = document.getElementById("model").value;
+  var precio = document.getElementById("price").value;
+  var detalles = document.getElementById("details").value;
+  var unidades = document.getElementById("units").value;
+  var imagen = document.getElementById("image");
+
+  // Inicializa los elementos de error a un valor vacío
+  document.getElementById("nameError").textContent = "";
+  document.getElementById("priceError").textContent = "";
+  document.getElementById("unitsError").textContent = "";
+  document.getElementById("modelError").textContent = "";
+  document.getElementById("brandError").textContent = "";
+  document.getElementById("detailsError").textContent = "";
+  document.getElementById("imageError").textContent = "";
+
+  var hasError = false;
+
+  if (nombre.trim() === "") {
+    document.getElementById("nameError").textContent = "Este campo no puede estar en blanco.";
+    hasError = true;
+  } else if (nombre.length > 100) {
+    document.getElementById("nameError").textContent = "El nombre debe tener menos de 100 caracteres.";
+    hasError = true;
+  }
+
+  if (marca.trim() === "" || modelo.length < 25) {
+    document.getElementById("brandError").textContent = "Este campo no puede estar en blanco y debe tener menos de 25 caracteres.";
+    hasError = true;
+  }
+
+  if (modelo.trim() === "" || modelo.length > 25) {
+    document.getElementById("modelError").textContent = "Este campo no puede estar en blanco y debe tener menos de 25 caracteres..";
+    hasError = true;
+  } 
+
+  if (precio.trim() === "" || parseFloat(precio) < 99.99) {
+    document.getElementById("priceError").textContent = "Este campo no puede estar en blanco y mayor a 99.99.";
+    hasError = true;
+  } 
   
-      if (nombre.length === 0 || nombre.length > 100) {
-        alert("El nombre debe tener entre 1 y 100 caracteres.");
-        return false;
-      }
-  
-      if (marca === "") {
-        alert("Debe seleccionar una marca.");
-        return false;
-      }
-  
-      if (modelo.length === 0 || modelo.length > 25) {
-        alert("El modelo debe tener entre 1 y 25 caracteres.");
-        return false;
-      }
-  
-      if (precio < 99.99) {
-        alert("El precio debe ser mayor a 99.99.");
-        return false;
-      }
-  
-      if (detalles.length > 250) {
-        alert("Los detalles no pueden tener más de 250 caracteres.");
-        return false;
-      }
-  
-      if (unidades < 0) {
-        alert("Las unidades no pueden ser negativas.");
-        return false;
-      }
-  
-      imagen.defaultValue = "img/img.jpg";
-  
-      return true;
-    }
-    
-  </script>
-  
+
+  if (detalles.trim() === "" || detalles.length > 250) {
+    document.getElementById("detailsError").textContent = "Este campo no puede estar en blanco.";
+    hasError = true;
+  } 
+
+  if (unidades.trim() === "" || parseInt(unidades) < 0) {
+    document.getElementById("unitsError").textContent = "Este campo no puede estar en blanco y el numero no puede ser negativo.";
+    hasError = true;
+  } 
+
+  if (hasError) {
+    return false;
+  }
+
+  imagen.defaultValue = "img/img.jpg";
+
+  return true;
+}
+
+  </script> -->
+
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <!-- Lógica del Frontend -->
