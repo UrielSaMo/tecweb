@@ -1,0 +1,13 @@
+<!DOCTYPE cinefanatico SYSTEM "cinefanatico.dtd">
+<cinefanatico>
+    <tarjeta noserie="123456789" visitas="10" puntos="500">
+    <nombre>Uriel Salinas Morales</nombre>
+    <correo>urielgmail.com</correo>
+    <telefono tipo="movil">2214054360</telefono>
+    </tarjeta>
+    <tarjeta noserie="987654321" visitas="97" puntos="710">
+    <nombre>Axel Samuel Luna Gomez</nombre>
+    <correo>axel@gmail.com</correo>
+    <telefono tipo="movil">2216894532</telefono>
+    </tarjeta>
+    </cinefanatico>
