@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spotify xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="spotify_v2.xsd">
+    <cuenta id="1" plan="premium" fechaIni="21-11-2023" fechaFin="21-12-2023">
+        <nombre>Uriel Salinas Morales</nombre>
+        <correo>uriel@gmail.com</correo>
+        <telefono tipo="movil">2214054360</telefono>
+    </cuenta>
+    <cuenta id="2" plan="gratuito" fechaIni="21-11-2023" fechaFin="21-03-2024">
+        <nombre>Axel Samuel Luna Gomez</nombre>
+        <correo>axel@gmail.com</correo>
+        <telefono tipo="movil">2222164863</telefono>
+    </cuenta>
+</spotify>
