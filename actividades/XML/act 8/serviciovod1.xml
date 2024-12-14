@@ -1,0 +1,100 @@
+<CatalogoVOD>
+    <cuenta>
+        <correo>Uriel@gmail.com</correo>
+        <perfiles>
+            <perfil>
+                <usuario>Uriel</usuario>
+                <idioma>Español</idioma>
+            </perfil>
+            <perfil>
+                <usuario>Axel</usuario>
+                <idioma>Español</idioma>
+            </perfil>
+        </perfiles>
+    </cuenta>
+    <contenido>
+
+        <peliculas>
+        <genero>
+            <nombre>Accion</nombre>
+            <titulo>
+                <nombre>Maze Runner</nombre>
+                <duracion>150 min</duracion>
+            </titulo>
+            <titulo>
+                <nombre>Rapidos y Furiosos</nombre>
+                <duracion>155 min</duracion>
+            </titulo>
+            <titulo>
+                <nombre>Sonido de Libertad</nombre>
+                <duracion>1300 min</duracion>
+            </titulo>
+            <titulo>
+                <nombre>Contra reloj</nombre>
+                <duracion>105 min</duracion>
+            </titulo>
+        </genero>
+        <genero>
+            <nombre>Romance</nombre>
+            <titulo>
+                <nombre>Culpa mia</nombre>
+                <duracion>120 min</duracion>
+            </titulo>
+            <titulo>
+                <nombre>Ghosted</nombre>
+                <duracion>105 min</duracion>
+            </titulo>
+            <titulo>
+                <nombre>After Everything</nombre>
+                <duracion>130 min</duracion>
+            </titulo>
+            <titulo>
+                <nombre>Elementos</nombre>
+                <duracion>85 min</duracion>
+            </titulo>
+        </genero>
+        </peliculas>
+
+        <programas>
+            <genero>
+                <nombre>Educativo</nombre>
+                <titulo>
+                    <nombre>Aprendizajes Clave para la Educación Integral </nombre>
+                    <duracion>60 minutos </duracion>
+                </titulo>
+                <titulo>
+                    <nombre>educación socioemocional.</nombre>
+                    <duracion>75 minutos</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Patrones hermosos </nombre>
+                    <duracion>60 minutos </duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Lumiar</nombre>
+                    <duracion>55 minutos</duracion>
+                </titulo>
+            </genero>
+            <genero>
+                <nombre>Infantil</nombre>
+                <titulo>
+                    <nombre>PAW Patrol</nombre>
+                    <duracion>10 temporadas</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>La peor Bruja</nombre>
+                    <duracion>4 temporadas</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Bluey</nombre>
+                    <duracion>3 temporadas</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Daniel Tigre</nombre>
+                    <duracion>6 temporadas</duracion>
+                </titulo>
+            </genero>
+        </programas>
+
+    </contenido>
+</CatalogoVOD>

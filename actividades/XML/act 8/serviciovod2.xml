@@ -1,0 +1,38 @@
+<CatalogoVOD>
+    <cuenta correo="Uriel@gmail.com">
+        <perfiles>
+            <perfil usuario="Uriel" idioma="Español"/>
+            <perfil usuario="Axel" idioma="Español"/>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero nombre="Accion">
+                <titulo nombre="Maze Runner" duracion="150 min"/>
+                <titulo nombre="Rapidos y Furiosos" duracion="155 min"/>
+                <titulo nombre="Sonido de Libertad" duracion="1300 min"/>
+                <titulo nombre="Contra reloj" duracion="105 min"/>
+            </genero>
+            <genero nombre="Romance">
+                <titulo nombre="Culpa mia" duracion="120 min"/>
+                <titulo nombre="Ghosted" duracion="105 min"/>
+                <titulo nombre="After Everything" duracion="130 min"/>
+                <titulo nombre="Elementos" duracion="85 min"/>
+            </genero>
+        </peliculas>
+        <programas>
+            <genero nombre="Educativo">
+                <titulo nombre="Aprendizajes Clave para la Educación Integral" duracion="60 minutos"/>
+                <titulo nombre="educación socioemocional." duracion="75 minutos"/>
+                <titulo nombre="Patrones hermosos" duracion="60 minutos"/>
+                <titulo nombre="Lumiar" duracion="55 minutos"/>
+            </genero>
+            <genero nombre="Infantil">
+                <titulo nombre="PAW Patrol" duracion="10 temporadas"/>
+                <titulo nombre="La peor Bruja" duracion="4 temporadas"/>
+                <titulo nombre="Bluey" duracion="3 temporadas"/>
+                <titulo nombre="Daniel Tigre" duracion="6 temporadas"/>
+            </genero>
+        </programas>
+    </contenido>
+</CatalogoVOD>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tw:spotify xmlns:tw="http://tecnologiasweb.com.mx"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://tecnologiasweb.com.mx spotify_ns.xsd">
+    <tw:cuenta 
+        tw:id="1" tw:plan="premium" tw:fechaini="2023-11-21" tw:fechafin="2023-12-21">
+        <tw:nombre>Uriel Salinas Morales</tw:nombre>
+        <tw:correo>uriel@gmail.com</tw:correo>
+        <tw:telefono tw:tipo="movil">2461747584</tw:telefono>
+    </tw:cuenta>
+    <tw:cuenta 
+        tw:id="2" tw:plan="gratuito" tw:fechaini="2023-11-21" tw:fechafin="2024-03-21">
+        <tw:nombre>Axel Samuel Luna Gomez</tw:nombre>
+        <tw:correo>axel@gmail.com</tw:correo>
+        <tw:telefono tw:tipo="movil">2222164863</tw:telefono>
+    </tw:cuenta>
+</tw:spotify>
+
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vod:CatalogoVOD Version="2.0"
+    xmlns:vod="http://starfire.com/vod"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://starfire.com/vod serviciovod_ns.xsd">
+    <vod:cuenta correo="carlos.conderl@correo.buap.mx">
+        <vod:perfiles>
+            <vod:perfil usuario="Michel" idioma="Español"/>
+            <vod:perfil usuario="Pedro" idioma="Español"/>
+        </vod:perfiles>
+    </vod:cuenta>
+    <vod:contenido>
+        <vod:peliculas region="MEX">
+            <vod:generos nombre="Super Héroes">
+                <vod:titulo duracion="157">ETERNALS</vod:titulo>
+                <vod:titulo duracion="124">CAPITAN AMÉRICA, EL 1ER VENGADOR</vod:titulo>
+            </vod:generos>
+            <vod:genero nombre="Animadas">
+                <vod:titulo duracion="100">RED</vod:titulo>
+                <vod:titulo duracion="107">RAYA</vod:titulo>
+            </vod:genero>
+        </vod:peliculas>
+        <vod:series region="USA">
+            <vod:genero nombre="Comedia">
+                <vod:titulo duracion="30">FRIENDS</vod:titulo>
+                <vod:titulo duracion="40">HOW I MEET YOUR MOTHER</vod:titulo>
+            </vod:genero>
+            <vod:genero nombre="Suspenso">
+                <vod:titulo duracion="30">Stranger Things</vod:titulo>
+                <vod:titulo duracion="45">Criminal Minds</vod:titulo>
+            </vod:genero>
+        </vod:series>
+    </vod:contenido>
+</vod:CatalogoVOD>

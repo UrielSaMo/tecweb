@@ -1,5 +1,3 @@
-
-
 function init() {
     /**
      * Convierte el JSON a string para poder mostrarlo
@@ -166,34 +164,7 @@ $(document).ready(function () {
         }
     });
     
-    //---------------------Buscar nombre para insercion 
-    $("#name").keyup(function (e) { 
-        if ($("#name").val()) {
-          let name = $("#name").val();
-          console.log(name);
-          $.ajax({
-            type: "GET",
-            url: 'backend/buscarname.php',
-            data: { name },
-            success: function (response) {
-              console.log(response);
-              let productos = JSON.parse(response);
-              if (Object.keys(productos).length > 0) {
-                let template_bar = "";
-                template_bar += `
-                                  <li style="list-style: none;">status: Error </li>
-                                  <li style="list-style: none;">message: Producto con el mismo nombre ya se encuenta en BD </li>
-                              `;
-                $("#product-result").attr("class", "card my-4 d-block");
-                $("#container").html(template_bar);
-              }else{
-                $("#product-result").attr("class", "card my-4 d-none");
-              }
-            },
-          });
-        }
-      });
-   
+    
     //--------------------Funcion para buscar producto------------------------
     function fetchProducts() {
         $.ajax({
